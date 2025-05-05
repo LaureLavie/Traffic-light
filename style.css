@@ -1,0 +1,165 @@
+/* Eteignez toutes les lampes, Allumez les au survol.
+Reproduisez la séquence d'allumage d'un feu tricolore.
+Affichez 2 feux et synchronisez les (simulez un carrefour). */
+
+.traffic-light {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 400px;
+  gap: 40px;
+}
+.feu1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  width: 200px;
+  height: 400px;
+}
+.feu2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  width: 200px;
+  height: 400px;
+}
+
+/* animation feu 1 */
+.feu1 .red {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.feu1 .orange {
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.feu1 .green {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* animation feu 2 */
+.feu2 .red {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.feu2 .orange {
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.feu2 .green {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Animations feu 1 */
+.feu1 .red {
+  animation: red1 15s infinite;
+}
+.feu1 .orange {
+  animation: orange1 15s infinite;
+}
+.feu1 .green {
+  animation: green1 15s infinite;
+}
+
+/* Animations feu 2 */
+.feu2 .red {
+  animation: red2 15s infinite;
+}
+.feu2 .orange {
+  animation: orange2 15s infinite;
+}
+.feu2 .green {
+  animation: green2 15s infinite;
+}
+
+/* Feu 1 */
+@keyframes red1 {
+  0%,
+  30% {
+    background: red;
+  }
+  30.01%,
+  100% {
+    background: #555;
+  }
+}
+@keyframes orange1 {
+  30%,
+  40% {
+    background: orange;
+  }
+  0%,
+  29.99%,
+  40.01%,
+  100% {
+    background: #555;
+  }
+}
+@keyframes green1 {
+  40%,
+  90% {
+    background: green;
+  }
+  0%,
+  39.99%,
+  90.01%,
+  100% {
+    background: #555;
+  }
+}
+
+/* Feu 2 */
+@keyframes red2 {
+  40%,
+  100% {
+    background: red;
+  }
+  0%,
+  39.99% {
+    background: #555;
+  }
+}
+@keyframes orange2 {
+  30%,
+  40% {
+    background: orange;
+  }
+  0%,
+  29.99%,
+  40.01%,
+  100% {
+    background: #555;
+  }
+}
+@keyframes green2 {
+  0%,
+  30% {
+    background: green;
+  }
+  30.01%,
+  100% {
+    background: #555;
+  }
+}
